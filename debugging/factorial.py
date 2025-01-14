@@ -5,7 +5,7 @@ def factorial(n):
     result = 1
     while n > 1:
         result *= n
-        n -= 1  # Decrement n to ensure the loop terminates
+        n -= 1  # Decrement n to avoid infinite loop
     return result
 
 if __name__ == "__main__":
@@ -18,7 +18,6 @@ if __name__ == "__main__":
         if num < 0:
             print("Factorial is not defined for negative numbers.")
         else:
-            f = factorial(num)
-            print(f"The factorial of {num} is {f}")
+            print(factorial(num))
     except ValueError:
         print("Please provide a valid integer.")
